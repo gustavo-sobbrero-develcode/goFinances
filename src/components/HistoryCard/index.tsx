@@ -16,7 +16,7 @@ export function HistoryCard ({
     return(
         <Container color={color}>
             <Title>{title}</Title>
-            <Amount>{amount}</Amount>
+            <Amount> {amount} </Amount>
         </Container>
     ); 
 }

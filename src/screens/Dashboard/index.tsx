@@ -154,7 +154,8 @@ export function Dashboard() {
 
   return (
     <Container>
-      {isLoading ? 
+      {
+      isLoading ? 
         <LoadContainer>
           <ActivityIndicator 
           color={theme.colors.primary} 
