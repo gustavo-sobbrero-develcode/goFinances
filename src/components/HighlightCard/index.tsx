@@ -23,7 +23,7 @@ const icon = {
   total: 'dollar-sign'
 }
 
-export function HighligthCard({ 
+export function HighlightCard({ 
   type,
   title, 
   amount, 
