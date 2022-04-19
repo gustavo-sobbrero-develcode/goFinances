@@ -15,11 +15,11 @@ import {
 
 import theme from "./src/global/styles/theme";
 
-import { NavigationContainer } from "@react-navigation/native";
+import { Routes } from "./src/routes";
 import {AppRoutes} from './src/routes/app.routes';
 
-import {SignIn} from './src/screens/SignIn'
-import { AuthContext } from './src/AuthContext';
+import {SignIn} from './src/screens/SignIn';
+import { AuthProvider } from './src/./hooks/auth';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -35,11 +35,9 @@ export default function App() {
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
       <ThemeProvider theme={theme}>
-        <NavigationContainer>
-          <AuthContext.Provider value={[]}>
-          <SignIn />
-          </AuthContext.Provider>
-        </NavigationContainer>
+          <AuthProvider>
+          <Routes />
+          </AuthProvider>
       </ThemeProvider>
     </GestureHandlerRootView>
   );
